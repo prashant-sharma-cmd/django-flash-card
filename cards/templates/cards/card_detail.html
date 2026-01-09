@@ -5,6 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-    <p>Nice Page</p>
+    {% extends "base_bootstrap.html" %}
+
+    {% block content %}
+        <h1>
+        {{ question }}
+        </h1>
+        <h2>
+        {{ answer }}
+        </h2>
+    {% endblock content %}
 </body>
 </html>
