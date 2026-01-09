@@ -9,14 +9,23 @@
     {% extends "base_bootstrap.html" %}
 
     {% block content %}
+    <a href="{% url 'cards:create' %}"><h2> Create New Card</h2></a>
         <h2>
             All Cards
         </h2>
         {% for card in card_list %}
             <h3>🗃 {{ card.box }} Box</h3>
+            <a href="{% url 'cards:detail' pk=card.id %}">
             <article>
                 {{ card }}
             </article>
+            </a>
+            <a href=" {% url 'cards:update' pk=card.pk %} ">
+                Update!
+            </a>
+            <a href=" {% url 'cards:delete' pk=card.pk %} ">
+                Delete!
+            </a>
         {% endfor %}
     {% endblock content %}
 </body>
