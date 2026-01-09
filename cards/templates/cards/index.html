@@ -6,6 +6,18 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Hello World!</h1>
+    {% extends "base_bootstrap.html" %}
+
+    {% block content %}
+        <h2>
+            All Cards
+        </h2>
+        {% for card in card_list %}
+            <h3>🗃 {{ card.box }} Box</h3>
+            <article>
+                {{ card }}
+            </article>
+        {% endfor %}
+    {% endblock content %}
 </body>
 </html>
