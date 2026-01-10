@@ -1,10 +1,10 @@
 from django import forms
-from .models import Card
+from .models import Box
 
-class CreateForm(forms.ModelForm):
+class BoxCreateForm(forms.ModelForm):
 
     class Meta:
-        model = Card
-        fields = ['question', 'answer']
+        model = Box
+        fields = ['name', 'capacity', 'state']
 
 

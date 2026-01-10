@@ -14,6 +14,9 @@
 <label for="show_password">Show Password</label>
 <input type="hidden" name="next" value="{{ next }}" />
 </form>
+<strong>
+    New User? <a href="{% url 'accounts:signup' %}">Register</a>
+</strong>
 
     <script>
         const passwordField = document.getElementById('id_password');
